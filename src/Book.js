@@ -11,7 +11,7 @@ const Book = ({book, onShelfChange}) => {
         <div className="book-top">
           <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${bookImageURL})` }}></div>
           <div className="book-shelf-changer">
-            <select onClick={onShelfChange}>
+            <select onChange={e => onShelfChange(book, e.target.value)}>
               <option value="none" disabled>Move to...</option>
               <option value="currentlyReading">Currently Reading</option>
               <option value="wantToRead">Want to Read</option>

@@ -5,20 +5,35 @@ import Header from './Header';
 import BookList from './BookList';
 
 class BooksApp extends React.Component {
-  state = {
-    books: []
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      books: []
+    };
+
+    this.retrieveBooks = this.retrieveBooks.bind(this);
   }
 
   componentDidMount() {
     // retrieve all of users books
+    this.retrieveBooks();
+  }
+
+  retrieveBooks = () => {
     BooksAPI.getAll().then((books) => {
       console.log(books);
       this.setState({ books });
     });
   }
 
-  handleShelfChange() {
-    console.log("changing shelf!");
+  handleShelfChange = (book, newShelf) => {
+    console.log("changing shelf!", book, newShelf);
+    // Update the bookshelf on API
+    BooksAPI.update(book, newShelf).then((data) => {
+      console.log(data);
+      this.retrieveBooks();
+    });
   }
 
   render() {
