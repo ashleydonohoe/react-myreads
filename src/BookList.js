@@ -4,11 +4,10 @@ import BookShelf from './BookShelf';
 class BookList extends Component {
 
   filterBooks(shelf) {
-    return this.props.books.filter(book => book.shelf == shelf);
+    return this.props.books.filter(book => book.shelf === shelf);
   }
 
    render() {
-     const { books } = this.props;
      return (
        <div className="list-books-content">
          <div>
