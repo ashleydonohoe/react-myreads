@@ -37,6 +37,8 @@ class BooksApp extends React.Component {
   }
 
   render() {
+
+    //TODO: Set up React router with paths for the root and search paths 
     return (
       <div className="app">
           <div className="list-books">
