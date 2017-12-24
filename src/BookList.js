@@ -3,6 +3,7 @@ import BookShelf from './BookShelf';
 
 class BookList extends Component {
    render() {
+     const { books } = this.props;
      return (
        <div className="list-books-content">
          <div>
