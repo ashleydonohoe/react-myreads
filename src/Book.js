@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Book = ({book}) => {
+const Book = ({book, onShelfChange}) => {
   const { title, subtitle, authors, imageLinks } = book;
   const fullTitle = subtitle ? `${title} - ${subtitle}` : title;
   const fullAuthors = authors.join(', ');
@@ -11,7 +11,7 @@ const Book = ({book}) => {
         <div className="book-top">
           <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${bookImageURL})` }}></div>
           <div className="book-shelf-changer">
-            <select>
+            <select onClick={onShelfChange}>
               <option value="none" disabled>Move to...</option>
               <option value="currentlyReading">Currently Reading</option>
               <option value="wantToRead">Want to Read</option>

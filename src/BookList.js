@@ -8,12 +8,13 @@ class BookList extends Component {
   }
 
    render() {
+     const { onShelfChange } = this.props;
      return (
        <div className="list-books-content">
          <div>
-          <BookShelf title="Want to Read" books={this.filterBooks("wantToRead")} />
-          <BookShelf title="Currently Reading" books={this.filterBooks("currentlyReading")} />
-          <BookShelf title="Read" books={this.filterBooks("read")} />
+          <BookShelf title="Want to Read" books={this.filterBooks("wantToRead")} onShelfChange={onShelfChange} />
+          <BookShelf title="Currently Reading" books={this.filterBooks("currentlyReading")} onShelfChange={onShelfChange} />
+          <BookShelf title="Read" books={this.filterBooks("read")} onShelfChange={onShelfChange} />
           </div>
        </div>
      )

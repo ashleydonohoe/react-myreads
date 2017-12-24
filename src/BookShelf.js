@@ -4,10 +4,10 @@ import Book from './Book';
 class BookShelf extends Component {
   renderBooks() {
     // Renders books for shelf
-    const { books } = this.props;
+    const { books, onShelfChange } = this.props;
     return books.map((book, id) => {
       return (
-        <Book key={id} book={book} />
+        <Book key={id} book={book} onShelfChange={onShelfChange} />
       )
     })
   }

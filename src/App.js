@@ -17,12 +17,16 @@ class BooksApp extends React.Component {
     });
   }
 
+  handleShelfChange() {
+    console.log("changing shelf!");
+  }
+
   render() {
     return (
       <div className="app">
           <div className="list-books">
             <Header />
-            <BookList books={this.state.books} />
+            <BookList books={this.state.books} onShelfChange={this.handleShelfChange} />
             <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
             </div>
