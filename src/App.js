@@ -12,6 +12,7 @@ class BooksApp extends React.Component {
   componentDidMount() {
     // retrieve all of users books
     BooksAPI.getAll().then((books) => {
+      console.log(books);
       this.setState({ books });
     });
   }
