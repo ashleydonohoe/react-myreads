@@ -39,7 +39,7 @@ class Search extends Component {
   renderResults() {
     // Render the bookshelf if there are books in the array
     // Render no results message otherwise
-    const {bookResults} = this.state;
+    const { bookResults } = this.state;
     const content = bookResults.length > 0 ? <BookShelf books={bookResults} title="Book results" onShelfChange={this.props.onShelfChange} /> : "No Results yet";
     return content;
   }
@@ -56,7 +56,7 @@ class Search extends Component {
       </div>
       <div className="search-books-results">
         <ol className="books-grid">
-        { this.renderResults()}
+        { this.renderResults() }
         </ol>
       </div>
     </div>

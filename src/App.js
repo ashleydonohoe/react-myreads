@@ -38,6 +38,7 @@ class BooksApp extends React.Component {
 
   render() {
     const { books } = this.state;
+    
     return (
       <div className="app">
         <Route path="/search" render={( { history } ) => (

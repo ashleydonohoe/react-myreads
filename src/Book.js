@@ -5,6 +5,7 @@ const Book = ({book, onShelfChange}) => {
   const fullTitle = subtitle ? `${title} - ${subtitle}` : title;
   const fullAuthors = authors ? authors.join(', ') : '';
   const bookImageURL = imageLinks.thumbnail ? imageLinks.thumbnail : '';
+  
   return (
     <li>
       <div className="book">
