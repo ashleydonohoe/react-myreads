@@ -33,6 +33,7 @@ class BooksApp extends React.Component {
     console.log("changing shelf!", book, newShelf);
     // Update the bookshelf on API
     BooksAPI.update(book, newShelf).then((data) => {
+      // Retrieve updated booklist
       this.retrieveBooks();
     });
   }
