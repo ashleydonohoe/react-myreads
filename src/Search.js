@@ -1,7 +1,7 @@
 import React, { Component } from'react';
 
 class Search extends Component {
-  render()
+  render() {
     return (
     <div className="search-books">
       <div className="search-books-bar">
@@ -24,6 +24,7 @@ class Search extends Component {
       </div>
     </div>
   );
+  }
 }
 
 export default Search;
