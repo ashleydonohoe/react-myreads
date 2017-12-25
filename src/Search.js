@@ -34,36 +34,15 @@ class Search extends Component {
         }
       });
     }
-
-    console.log(this.state.bookResults);
   }
 
   renderResults() {
     // Render the bookshelf if there are books in the array
     // Render error if no books found
     // Render nothing if there's no value for queryString
-    // const content = this.state.bookResults.length > 0 ? <BookShelf books={this.state.bookResults} /> : 'Do a search';
-    // return content;
-    // let content;
-    // if(this.state.bookResults > 0) {
-    //   console.log("There are results");
-    //   content = <BookShelf books={this.state.bookResults} onShelfChange={this.props.onShelfChange} />;
-    //
-    // } else {
-    //   console.log("NO results");
-    //   content = "No results yet";
-    // }
-    //
-    // console.log(content);
-    // return content;
-    // let content;
-    // if(this.state.bookResults > 0) {
-    //   content = "Books found!";
-    // } else {
-    //   content = "No books found!";
-    // }
-    //
-    // return content;
+    const {bookResults} = this.state;
+    const content = bookResults.length > 0 ? <BookShelf books={bookResults} title="Book results" onShelfChange={this.props.onShelfChange} /> : "No Results yet";
+    return content;
   }
 
   render() {

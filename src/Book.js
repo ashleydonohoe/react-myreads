@@ -3,9 +3,8 @@ import React from 'react';
 const Book = ({book, onShelfChange}) => {
   const { title, subtitle, authors, imageLinks, shelf } = book;
   const fullTitle = subtitle ? `${title} - ${subtitle}` : title;
-  const fullAuthors = authors.join(', ');
-  const bookImageURL = imageLinks.thumbnail;
-  console.log(book);
+  const fullAuthors = authors ? authors.join(', ') : '';
+  const bookImageURL = imageLinks.thumbnail ? imageLinks.thumbnail : '';
   return (
     <li>
       <div className="book">

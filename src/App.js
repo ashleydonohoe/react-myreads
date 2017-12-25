@@ -24,13 +24,11 @@ class BooksApp extends React.Component {
 
   retrieveBooks = () => {
     BooksAPI.getAll().then((books) => {
-      console.log(books);
       this.setState({ books });
     });
   }
 
   handleShelfChange = (book, newShelf) => {
-    console.log("changing shelf!", book, newShelf);
     // Update the bookshelf on API
     BooksAPI.update(book, newShelf).then((data) => {
       // Retrieve updated booklist
@@ -40,7 +38,6 @@ class BooksApp extends React.Component {
 
   render() {
     const { books } = this.state;
-    //TODO: Set up React router with paths for the root and search paths
     return (
       <div className="app">
         <Route path="/search" render={( { history } ) => (
