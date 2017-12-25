@@ -19,7 +19,7 @@ class Search extends Component {
     // Get search results if there's currently a queryString
     if(queryString) {
       BooksAPI.search(queryString).then((books) => {
-        // If books isn't undefined and has at least 1 book in it, update state with these new books
+        // If books has at least 1 book in it, update state with these new books
         if(books.length > 0) {
           this.setState({
             bookResults: books,
@@ -38,8 +38,7 @@ class Search extends Component {
 
   renderResults() {
     // Render the bookshelf if there are books in the array
-    // Render error if no books found
-    // Render nothing if there's no value for queryString
+    // Render no results message otherwise
     const {bookResults} = this.state;
     const content = bookResults.length > 0 ? <BookShelf books={bookResults} title="Book results" onShelfChange={this.props.onShelfChange} /> : "No Results yet";
     return content;
