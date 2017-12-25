@@ -33,7 +33,6 @@ class BooksApp extends React.Component {
     console.log("changing shelf!", book, newShelf);
     // Update the bookshelf on API
     BooksAPI.update(book, newShelf).then((data) => {
-      console.log(data);
       this.retrieveBooks();
     });
   }
@@ -44,7 +43,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <Route path="/search" render={( { history } ) => (
-          <h1>Search Page</h1>
+          <Search books={books} onShelfChange={this.handleShelfChange}/>
         )}/>
 
         <Route exact path="/" render={() => (
