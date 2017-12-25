@@ -1,3 +1,5 @@
+/* used fix for heroku suggested at https://stackoverflow.com/questions/41772411/react-routing-works-in-local-machine-but-not-heroku */
+
 {
   "root": "build/",
   "clean_urls": false,
