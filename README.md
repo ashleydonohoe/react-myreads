@@ -3,10 +3,10 @@ This is the first React project in the Front-End Developer Nanodegree that allow
 
 ## Running the App
 
-__Locally__
+__Locally__:
 To run this app, navigate to the folder's path in your console. Type 'npm install' to install all modules needed to run the app. Once they're installed, type 'npm start' to open the webpage in your browser.
 
-__Online__
+__Online__:
 You can also check out the app live online at https://ashleys-myreads.herokuapp.com/
 
 ## How to Use the App
