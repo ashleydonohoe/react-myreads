@@ -3,7 +3,11 @@ This is the first React project in the Front-End Developer Nanodegree that allow
 
 ## Running the App
 
+__Locally__
 To run this app, navigate to the folder's path in your console. Type 'npm install' to install all modules needed to run the app. Once they're installed, type 'npm start' to open the webpage in your browser.
+
+__Online__
+You can also check out the app live online at https://ashleys-myreads.herokuapp.com/
 
 ## How to Use the App
 To add a book to your self, click the "+" button on the bottom right, enter a search term (see available terms below), and then the book's down arrow button to see options for categorizing the book. This adds it to your collection, which you can then view on the main page.
