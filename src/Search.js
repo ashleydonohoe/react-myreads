@@ -18,7 +18,6 @@ class Search extends Component {
 
     // Empty book results and don't search for empty query
     if(queryString.length === 0) {
-      console.log("Query too short");
       this.setState({
         bookResults: []
       });
@@ -58,7 +57,6 @@ class Search extends Component {
     // Render no results message otherwise
     const { bookResults } = this.state;
     const existingBooks = this.props.books;
-    console.log(existingBooks);
     const content = bookResults.length > 0 ? <BookShelf books={bookResults} title="Book results" onShelfChange={this.props.onShelfChange} /> : "No Results yet";
     return content;
   }
